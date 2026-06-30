@@ -1,4 +1,0 @@
-[2026-06-29 11:55:23] [1] [WARN] Reporting disabled: using no op test run registrar
-[2026-06-29 11:55:23] [1] [INFO] TEST [Inventory Tests - sortProductsByPriceLowToHighTest] STARTED at [03:55:23 2026-06-30]
-[2026-06-29 11:55:23] [1] [INFO] Text 'Price (low to high)' was selected in 'sortDropdown'.
-[2026-06-29 11:55:24] [1] [INFO] TEST [Inventory Tests - sortProductsByPriceLowToHighTest] PASSED at [03:55:24 2026-06-30]

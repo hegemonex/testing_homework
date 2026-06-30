@@ -1,3 +1,0 @@
-[2026-06-30 12:06:56] [1] [WARN] Reporting disabled: using no op test run registrar
-[2026-06-30 12:06:56] [1] [INFO] TEST [Inventory Tests - addSingleItemCardTest] STARTED at [04:06:56 2026-06-30]
-[2026-06-30 12:06:57] [1] [INFO] TEST [Inventory Tests - addSingleItemCardTest] PASSED at [04:06:57 2026-06-30]

@@ -2,29 +2,29 @@ package com.solvd.pages;
 
 import com.solvd.components.CartItemComponent;
 import com.solvd.components.HeaderComponent;
-import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage extends AbstractPage {
 
-    @FindBy(css = ".header_secondary_container")
-    private ExtendedWebElement headerRoot;
+    @FindBy(css = ".cart_item")
+    private List<CartItemComponent> cartItems;
+
+    @FindBy(css = "#header_container")
+    private HeaderComponent header;
 
     @FindBy(id = "checkout")
-    private ExtendedWebElement checkoutButton;
+    private com.zebrunner.carina.webdriver.decorator.ExtendedWebElement checkoutButton;
 
     @FindBy(id = "continue-shopping")
-    private ExtendedWebElement continueShoppingButton;
+    private com.zebrunner.carina.webdriver.decorator.ExtendedWebElement continueShoppingButton;
 
     public CartPage(WebDriver driver) {
         super(driver);
@@ -32,30 +32,16 @@ public class CartPage extends AbstractPage {
 
     public List<CartItemComponent> getCartItems() {
         new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".cart_item")));
-        List<WebElement> elements = driver.findElements(By.cssSelector(".cart_item"));
-        List<CartItemComponent> items = new ArrayList<>();
-        for (WebElement element : elements) {
-            CartItemComponent item = new CartItemComponent(driver, element);
-            item.setElement(element);
-            item.setBy(By.cssSelector(".cart_item"));
-            items.add(item);
-        }
-        return items;
+                .until(ExpectedConditions.urlContains("cart.html"));
+        return cartItems;
     }
 
     public HeaderComponent getHeader() {
-        return new HeaderComponent(driver, headerRoot);
+        return header;
     }
 
     public boolean isEmpty() {
-        try {
-            new WebDriverWait(driver, Duration.ofSeconds(3))
-                    .until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".cart_item")));
-            return true;
-        } catch (Exception e) {
-            return driver.findElements(By.cssSelector(".cart_item")).isEmpty();
-        }
+        return driver.findElements(By.cssSelector(".cart_item")).isEmpty();
     }
 
     public void continueShopping() {

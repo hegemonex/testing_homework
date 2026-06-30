@@ -4,20 +4,18 @@ import com.solvd.components.HeaderComponent;
 import com.solvd.components.ProductCardComponent;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryPage extends AbstractPage {
 
-    private List<ExtendedWebElement> productRoots;
+    @FindBy(css = ".inventory_item")
+    private List<ProductCardComponent> productCards;
 
-    @FindBy(css = ".header_secondary_container")
-    private ExtendedWebElement headerRoot;
+    @FindBy(css = "#header_container")
+    private HeaderComponent header;
 
     @FindBy(css = ".product_sort_container")
     private ExtendedWebElement sortDropdown;
@@ -27,23 +25,15 @@ public class InventoryPage extends AbstractPage {
     }
 
     public List<ProductCardComponent> getProductCards() {
-        List<WebElement> elements = driver.findElements(By.cssSelector(".inventory_item"));
-        List<ProductCardComponent> cards = new ArrayList<>();
-        for (WebElement element : elements) {
-            ProductCardComponent card = new ProductCardComponent(driver, element);
-            card.setElement(element);
-            card.setBy(By.cssSelector(".inventory_item"));
-            cards.add(card);
-        }
-        return cards;
+        return productCards;
     }
 
     public HeaderComponent getHeader() {
-        return new HeaderComponent(driver, headerRoot);
+        return header;
     }
 
-    public void sortBy(String optionValue) {
-        sortDropdown.select(optionValue);
+    public void sortBy(String optionText) {
+        sortDropdown.select(optionText);
     }
 
     public ProductCardComponent getProductByName(String name) {

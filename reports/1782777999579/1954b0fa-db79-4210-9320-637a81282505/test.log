@@ -1,0 +1,4 @@
+[2026-06-30 12:07:05] [1] [WARN] Reporting disabled: using no op test run registrar
+[2026-06-30 12:07:05] [1] [INFO] TEST [Inventory Tests - removeItemFromCartTest] STARTED at [04:07:05 2026-06-30]
+[2026-06-30 12:07:06] [1] [INFO] Element clicked
+[2026-06-30 12:07:07] [1] [INFO] TEST [Inventory Tests - removeItemFromCartTest] PASSED at [04:07:07 2026-06-30]

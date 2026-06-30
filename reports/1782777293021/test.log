@@ -1,0 +1,42 @@
+[2026-06-29 11:54:53] [1] [INFO] 
+=========== WebDriver configuration ===========
+selenium_url=http://localhost:4444
+-------------- Driver capabilities ------------
+browserName=chrome
+===============================================
+
+[2026-06-29 11:54:53] [1] [WARN] Reporting disabled: using no op test run registrar
+[2026-06-29 11:54:57] [1] [INFO] Set thread-count=1
+[2026-06-29 11:54:57] [1] [INFO] Set data-provider-thread-count=1
+[2026-06-29 11:54:57] [1] [INFO] CARINA_CORE_VERSION: 1.3.0
+[2026-06-29 11:54:58] [1] [INFO] Starting driver session...
+[2026-06-29 11:55:01] [1] [INFO] Driver session started.
+[2026-06-29 11:55:04] [1] [INFO] Keys 'standard_user' are sent to element 'usernameInput'.
+[2026-06-29 11:55:04] [1] [INFO] Keys 'secret_sauce' are sent to element 'passwordInput'.
+[2026-06-29 11:55:04] [1] [INFO] Element 'loginBtn' is clicked.
+[2026-06-29 11:55:07] [1] [INFO] Starting driver session...
+[2026-06-29 11:55:08] [1] [INFO] Driver session started.
+[2026-06-29 11:55:10] [1] [INFO] Keys 'standard_user' are sent to element 'usernameInput'.
+[2026-06-29 11:55:10] [1] [INFO] Keys 'secret_sauce' are sent to element 'passwordInput'.
+[2026-06-29 11:55:10] [1] [INFO] Element 'loginBtn' is clicked.
+[2026-06-29 11:55:11] [1] [INFO] Starting driver session...
+[2026-06-29 11:55:12] [1] [INFO] Driver session started.
+[2026-06-29 11:55:13] [1] [INFO] Keys 'standard_user' are sent to element 'usernameInput'.
+[2026-06-29 11:55:13] [1] [INFO] Keys 'secret_sauce' are sent to element 'passwordInput'.
+[2026-06-29 11:55:14] [1] [INFO] Element 'loginBtn' is clicked.
+[2026-06-29 11:55:15] [1] [INFO] Starting driver session...
+[2026-06-29 11:55:17] [1] [INFO] Driver session started.
+[2026-06-29 11:55:18] [1] [INFO] Keys 'standard_user' are sent to element 'usernameInput'.
+[2026-06-29 11:55:18] [1] [INFO] Keys 'secret_sauce' are sent to element 'passwordInput'.
+[2026-06-29 11:55:18] [1] [INFO] Element 'loginBtn' is clicked.
+[2026-06-29 11:55:20] [1] [INFO] Starting driver session...
+[2026-06-29 11:55:21] [1] [INFO] Driver session started.
+[2026-06-29 11:55:22] [1] [INFO] Keys 'standard_user' are sent to element 'usernameInput'.
+[2026-06-29 11:55:23] [1] [INFO] Keys 'secret_sauce' are sent to element 'passwordInput'.
+[2026-06-29 11:55:23] [1] [INFO] Element 'loginBtn' is clicked.
+[2026-06-29 11:55:24] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2026-06-29 11:55:24] [1] [INFO] RESULT #1: TEST [Inventory Tests - addMultipleProductsAndVerifyCartCountTest] FAIL [log=file://C:\Users\User\Desktop\testing_homework\reports\1782777293021/92f5b0b8-063b-44da-9809-b38afa65536c/test.log]
+[2026-06-29 11:55:24] [1] [INFO] RESULT #2: TEST [Inventory Tests - addSingleItemCardTest] PASS [log=file://C:\Users\User\Desktop\testing_homework\reports\1782777293021/697ba4a1-2cf5-43c5-9422-251a636d5891/test.log]
+[2026-06-29 11:55:24] [1] [INFO] RESULT #3: TEST [Inventory Tests - cartContainsCorrectProductsTest] FAIL [log=file://C:\Users\User\Desktop\testing_homework\reports\1782777293021/ef7774d1-20a8-494f-8dd1-30bdd4d0a3a9/test.log]
+[2026-06-29 11:55:24] [1] [INFO] RESULT #4: TEST [Inventory Tests - removeItemFromCartTest] FAIL [log=file://C:\Users\User\Desktop\testing_homework\reports\1782777293021/f9bff1e5-154a-4649-a4ec-37bd91160c69/test.log]
+[2026-06-29 11:55:24] [1] [INFO] RESULT #5: TEST [Inventory Tests - sortProductsByPriceLowToHighTest] PASS [log=file://C:\Users\User\Desktop\testing_homework\reports\1782777293021/ba9e3fb5-2f5f-431c-a959-e9412c7a3068/test.log]
